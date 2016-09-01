@@ -1,0 +1,12 @@
+#navbar {
+    background-color: #f3f3f3;
+    text-align:left;
+}
+
+#navbar li {
+    display: inline-block;
+    text-align:left;
+    font-size: 20px;
+    background-color: #f3f3f3;
+    border: 2px solid #e7e7e7;
+}
