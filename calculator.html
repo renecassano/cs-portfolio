@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href= stylesheet.css>
+
+
+</head>
+<body>
+    <!-- Navbar Starts Here -->
+  <ul id="navbar">
+      <li> <a href="index.html"> About Me </a></li>
+      <li> <a href="hardware.html"> Hardware </a></li>
+      <li> <a href="howto.html"> How To </a></li>
+      <li> <a href="calculator.html"> Calculator </a></li>
+      <li> <a href="todo.html"> To Do List </a></li>
+      <li> <a href="#"> Vindinium </a></li>
+      <li> <a href="finalproject.html"> Big Project </a></li>
+      <li> <a href="finalprojecthowto.html"> Big Project How To </a></li>
+
+      </ul>
+  <!-- Navbar Ends Here -->
+  
+      <style>
+       h1            { text-align:center; padding: 15px 32px;}
+      .display       { background-color:#202020; border-style:solid; border-width:30px 4px 1px 5px; border-color:#202020; font-size: 50px; text-align:right;                   color:white;}
+      .acbutton      { background-color:#C6C7CB; border-style:solid; border-width:1px 1px 0px 1px;  border-color:black;   font-size: 21px; padding: 21px 27px;     float:left; }
+      .button1       { background-color:#D1D2D6; border-style:solid; border-width:1px 0px 0px 1px;  border-color:black;   font-size: 32px; padding: 15px 32px;     float:left; }
+      .button2       { background-color:#D1D2D6; border-style:solid; border-width:1px 0px 0px 1px;  border-color:black;   font-size: 32px; padding: 15px 32px;     float:left; }
+      .button3       { background-color:#D1D2D6; border-style:solid; border-width:1px 1px 0px 1px;  border-color:black;   font-size: 32px; padding: 15px 32px;     float:left; }         
+      .button4       { background-color:#D1D2D6; border-style:solid; border-width:1px 0px 1px 1px;  border-color:black;   font-size: 32px; padding: 15px 32px;     float:left; }
+      .button5       { background-color:#D1D2D6; border-style:solid; border-width:1px 0px 1px 1px;  border-color:black;   font-size: 32px; padding: 15px 32px;     float:left; }
+      .button6       { background-color:#D1D2D6; border-style:solid; border-width:1px 1px 1px 1px;  border-color:black;   font-size: 32px; padding: 15px 32px;     float:left; }         
+      .button7       { background-color:#D1D2D6; border-style:solid; border-width:0px 0px 1px 1px;  border-color:black;   font-size: 32px; padding: 16px 32px;     float:left; }
+      .button8       { background-color:#D1D2D6; border-style:solid; border-width:0px 0px 1px 1px;  border-color:black;   font-size: 32px; padding: 16px 32px;     float:left; }
+      .button9       { background-color:#D1D2D6; border-style:solid; border-width:0px 1px 1px 1px;  border-color:black;   font-size: 32px; padding: 16px 32px;     float:left; }         
+      .periodbutton  { background-color:#D1D2D6; border-style:solid; border-width:0px 1px 1px 0px;  border-color:black;   font-size: 32px; padding: 15px 36.5px;   float:left; }
+      .zeroButton    { background-color:#D1D2D6; border-style:solid; border-width:0px 1px 1px 1px;  border-color:black;   font-size: 32px; padding: 15px 73.5px;   float:left; }
+      .pi            { background-color:#C6C7CB; border-style:solid; border-width:1px 0px 0px 0px;  border-color:black;   font-size: 21px; padding: 21px 34px;     float:left; }
+      .squareroot    { background-color:#C6C7CB; border-style:solid; border-width:1px 1px 0px 1px;  border-color:black;   font-size: 21px; padding: 21px 35px;     float:left; }
+      .orangeButton  { background-color:#F9800F; border-style:solid; border-width:1px 1px 0px 0px;  border-color:black;   font-size: 32px; padding: 15px 33px;     float:left; color:white; }
+      .orangeButton2 { background-color:#F9800F; border-style:solid; border-width:1px 1px 1px 0px;  border-color:black;   font-size: 32px; padding: 15px 33.5px;   float:left; color:white; }
+      .orangeButton3 { background-color:#F9800F; border-style:solid; border-width:0px 1px 1px 0px;  border-color:black;   font-size: 32px; padding: 16.1px 29.5px; float:left; color:white; }
+      .orangeButton4 { background-color:#F9800F; border-style:solid; border-width:0px 1px 1px 0px;  border-color:black;   font-size: 32px; padding: 15px 29.5px;   float:left; color:white; }
+      .divideButton  { background-color:#F9800F; border-style:solid; border-width:1px 1px 0px 0px;  border-color:black;   font-size: 32px; padding: 15px 34.5px;   float:left; color:white; }
+      </style>
+      
+      
+
+  <h1> iPHONE-STYLE CALCULATOR </h1>
+  
+  <div style= "margin-left:500px; margin-right:500px;">
+  
+  <form name="Calculator">
+    
+  <input name="display" class= "display" placeholder= "0" style= "width:320px; height:50px;">
+  
+  <input type ="button"  class="acbutton"     value="AC" onClick = "btnclear()">
+  <input type ="button"  class="pi"           value="π"  onClick = "document.Calculator.display.value+='3.141592653589793238462643383279502884197169399375105820974944592307816406286'">
+  <input type ="button"  class="squareroot"   value="√"  onClick = "sqrt()">
+  <input type ="button"  class="divideButton" value="/"  onClick = "divide()">
+
+  <br>
+  
+  <input type ="button" class= "button1" value="7" onClick ="document.Calculator.display.value+='7'">
+  <input type ="button" class= "button2" value="8" onClick ="document.Calculator.display.value+='8'">
+  <input type ="button" class= "button3" value="9" onClick ="document.Calculator.display.value+='9'">
+  <input type ="button" class="orangeButton" value="*" onClick = "multiply()">
+
+  <br>
+  
+  <input type ="button" class= "button4" value="4" onClick ="document.Calculator.display.value+='4'">
+  <input type ="button" class= "button5" value="5" onClick ="document.Calculator.display.value+='5'">
+  <input type ="button" class= "button6" value="6" onClick ="document.Calculator.display.value+='6'">
+  <input type ="button" class="orangeButton2" value="-" onClick = "subtract()">
+
+  <br>
+  
+  <input type ="button" class= "button7" value="1" onClick ="document.Calculator.display.value+='1'">
+  <input type ="button" class= "button8" value="2" onClick ="document.Calculator.display.value+='2'">
+  <input type ="button" class= "button9" value="3" onClick ="document.Calculator.display.value+='3'">
+  <input type ="button" class="orangeButton3" value="+" onClick = "add()">
+
+  <br>
+  
+  <input type ="button" class="zeroButton" value="0" onClick ="document.Calculator.display.value+='0'">
+  <input type ="button" class="periodbutton" value="." onClick = "btndot()">
+  <input type ="button" class="orangeButton4" value="=" onClick ="document.Calculator.display.value = eval(document.Calculator.display.value)">
+
+</div>
+
+</form> 
+
+<script>
+
+function add()
+{ document.Calculator.display.value +="+";
+ document.Calculator.display.style.textAlign="right";}
+ 
+ function subtract()
+{ document.Calculator.display.value +="-";
+ document.Calculator.display.style.textAlign="right";}
+ 
+ function multiply()
+{ document.Calculator.display.value +="*";
+ document.Calculator.display.style.textAlign="right";}
+ 
+ function divide()
+{ document.Calculator.display.value +="/";
+ document.Calculator.display.style.textAlign="right";}
+ 
+ function sqrt()
+{ document.Calculator.display.value +="√";
+ document.Calculator.display.style.textAlign="right";}
+ 
+ function btnclear()
+{ document.Calculator.display.value ="";
+ document.Calculator.display.style.textAlign="right";}
+
+ </script>
+ 
+</body>
+</html>

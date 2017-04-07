@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>How To: Final Project</title>
+        <link rel="stylesheet" href= stylesheet.css>
+
+</head>
+<body>
+        <!-- Navbar Starts Here -->
+   <ul id="navbar">
+      <li> <a href="index.html"> About Me </a></li>
+      <li> <a href="hardware.html"> Hardware </a></li>
+      <li> <a href="howto.html"> How To </a></li>
+      <li> <a href="calculator.html"> Calculator </a></li>
+      <li> <a href="todo.html"> To Do List </a></li>
+      <li> <a href="#"> Vindinium </a></li>
+      <li> <a href="finalproject.html"> Big Project </a></li>
+      <li> <a href="finalprojecthowto.html"> Big Project How To </a></li>
+
+      </ul>
+  
+  <!-- Navbar Ends Here -->
+  
+  <h1>HOW TO: Make Images Buttons</h1>
+  
+  <img src="https://cdn.pbrd.co/images/1xvrLoW3I.png" width="606" height="426">
+  
+  <p>Firstly, if you want to just create a simple image button that makes something
+  happen, you must first create a &lt;form&gt; tag. Within the form, you can now
+  start creating your button. Start off by typing in 
+  &lt;input type=&quot;image&quot;. This tells the computer that you're going to
+  be making an <b>image</b> button. You can also assign a class or id to the 
+  button to style it individually. After this, you would type in src="", and a link
+  to your image would be in the quotations. Below is an example of a simple image button and the code for it.</p>
+
+<h2 style="text-align:left;">EXAMPLE:</h2>
+  
+  <form>
+      <input type="image" src=
+"https://s3.amazonaws.com/oscars-img-abc/wp-content/uploads/2017/01/10081705/1adc00a589e1d9c99850dcbd873e3ba1d1611f2d4fe14afb7dd2c2ad649f8377-370x492.jpg">
+      </form>
+      <figcaption style="text-align:left;"><b>The code for this is:</b><br> &lt;form&gt;<br/>&lt;input type=&quot;image&quot; id = &quot;EmmaStone&quot; src=<br/>&quot;https://s3.amazonaws.com/oscars-img-abc/wp-content/uploads/2017/01/10081705/1adc00a589e1d9c99850dcbd873e3ba1d1611f2d4fe14afb7dd2c2ad649f8377-370x492.jpg&quot;&gt;<br/>      &lt;/form&gt; </figcaption>
+    
+    <p style="text-align:left;">Now, you have a button that doesn't do anything. In order to make it do 
+    stuff, we'll need to start typing in javascript. For this, I'll use my own 
+    code as an example. In my code, what I did with buttons was make it so they unhide divs on click.<br>
+    The code for this using our above example would go like this:<br>
+   <b> var EmmaStone = document.getElementById(&quot;EmmaStone&quot;); </b> <br>
+   A quick reminder: that and the next line of example code are in <b>javascript</b>. 
+   What that line of code essentially does is establish "EmmaStone" as a variable.
+   Next, you would want to start off on a new line with:<br>
+<b>     EmmaStone.addEventListener(&quot;click&quot;, function(){<br/><br/>})
+</b> 
+Now, you just have to type in what you want the button to do on click. For me,
+I want the button to unhide a hidden div. If a div is hidden in the first place,
+that means it has its class set to something like class="hidden", and that
+class is set to display:none. Therefore, we would just want to simply change
+the class of the div on click, which would unhide it because its class wouldn't
+be set to "hidden" anymore. This means that I would type in: 
+<b>ExampleDiv.className=&quot;&quot;;  </b> right in the empty line between the brackets.
+
+    </p>
+    
+    <p> The final product here would look like this:</p>
+    
+    <div id="EmmaStone">
+      <input type="image" src=
+"https://s3.amazonaws.com/oscars-img-abc/wp-content/uploads/2017/01/10081705/1adc00a589e1d9c99850dcbd873e3ba1d1611f2d4fe14afb7dd2c2ad649f8377-370x492.jpg">
+      </div>
+      
+      <div id="ExampleDiv" class="hidden">
+          <p style="font-size:50px;"> EXAMPLE DIV!!!</p>
+          </div>
+    
+    <div class="boxed">
+    <h3> HTML </h3>
+    
+    <p style="text-align:left;">    <b> &lt;div id=&quot;EmmaStone&quot;&gt;<br/>      &lt;input type=&quot;image&quot; src=<br/>&quot;https://s3.amazonaws.com/oscars-img-abc/wp-content/uploads/2017/01/10081705/1adc00a589e1d9c99850dcbd873e3ba1d1611f2d4fe14afb7dd2c2ad649f8377-370x492.jpg&quot;&gt;<br/>      &lt;/div&gt;<br/>      <br/>      &lt;div id=&quot;ExampleDiv&quot; class=&quot;hidden&quot;&gt;<br/>          &lt;p style="font-size:50px;"&gt;EXAMPLE DIV!!!&lt;/p&gt;<br/>          &lt;/div&gt;</b></p>
+    </div>
+    
+        <div class="boxed">
+            <h3>CSS<h3>
+                <p style="text-align:left;"> .hidden { display:none; } </p>
+                
+    <div class="boxed">
+        <h3> JAVASCRIPT </h3>
+    <p style="text-align:left;">
+        var EmmaStone = document.getElementById(&quot;EmmaStone&quot;); <br/><br/>EmmaStone.addEventListener(&quot;click&quot;, function(){<br/>ExampleDiv.className=&quot;&quot;;<br/>})
+        </p>
+
+</div>
+    
+    
+    
+    
+    
+    
+    
+    <style>
+        .hidden { display:none; }
+        
+        .boxed {
+  border: 2px solid yellow ;
+}
+    </style>
+    
+  <script type="text/javascript" src="finalprojecthowto.js"></script>
+
+</body>
+</html>
