@@ -38,7 +38,7 @@
       .periodbutton  { background-color:#D1D2D6; border-style:solid; border-width:0px 1px 1px 0px;  border-color:black;   font-size: 32px; padding: 15px 36.5px;   float:left; }
       .zeroButton    { background-color:#D1D2D6; border-style:solid; border-width:0px 1px 1px 1px;  border-color:black;   font-size: 32px; padding: 15px 73.5px;   float:left; }
       .pi            { background-color:#C6C7CB; border-style:solid; border-width:1px 0px 0px 0px;  border-color:black;   font-size: 21px; padding: 21px 34px;     float:left; }
-      .squareroot    { background-color:#C6C7CB; border-style:solid; border-width:1px 1px 0px 1px;  border-color:black;   font-size: 21px; padding: 21px 35px;     float:left; }
+      .exponent      { background-color:#C6C7CB; border-style:solid; border-width:1px 1px 0px 1px;  border-color:black;   font-size: 21px; padding: 21px 37px;     float:left; }
       .orangeButton  { background-color:#F9800F; border-style:solid; border-width:1px 1px 0px 0px;  border-color:black;   font-size: 32px; padding: 15px 33px;     float:left; color:white; }
       .orangeButton2 { background-color:#F9800F; border-style:solid; border-width:1px 1px 1px 0px;  border-color:black;   font-size: 32px; padding: 15px 33.5px;   float:left; color:white; }
       .orangeButton3 { background-color:#F9800F; border-style:solid; border-width:0px 1px 1px 0px;  border-color:black;   font-size: 32px; padding: 16.1px 29.5px; float:left; color:white; }
@@ -58,7 +58,7 @@
   
   <input type ="button"  class="acbutton"     value="AC" onClick = "btnclear()">
   <input type ="button"  class="pi"           value="π"  onClick = "document.Calculator.display.value+='3.141592653589793238462643383279502884197169399375105820974944592307816406286'">
-  <input type ="button"  class="squareroot"   value="√"  onClick = "sqrt()">
+  <input type ="button"  class="exponent"     value="^"  onClick = "square()">
   <input type ="button"  class="divideButton" value="/"  onClick = "divide()">
 
   <br>
@@ -110,8 +110,8 @@ function add()
 { document.Calculator.display.value +="/";
  document.Calculator.display.style.textAlign="right";}
  
- function sqrt()
-{ document.Calculator.display.value +="√";
+ function square()
+{ document.Calculator.display.value +="^";
  document.Calculator.display.style.textAlign="right";}
  
  function btnclear()
