@@ -4,41 +4,87 @@
     <title>TO DO LIST</title>
 <style>
 
-input {font-size:24px;  text-align:center; width:99%;}
+input {font-size:24px; width:74.5%; margin:0; padding:0;}
 
-.strike {text-decoration:line-through;}
+.strike {text-decoration:line-through; background-color:red;}
 
-.red {background-color:red; color:white;}
+.addBtn {width:25%; float:right; font-size:22px; background-color:#F9800F;}
+
+li {font-size:24px; border-color:red; border-width:2px;margin:23px;}
+
+.resetBtn {float:right; width:20%;}
+
+body {background-color:#C6C7CB;}
+
+ul {background-color:white; border-color:#A9A9A9; border-width:3px; border-style:solid; width:74%;}
+
+.default {background-color:white;}
 
 .black {background-color:black; color:black;}
 
 </style>
 </head>
 <body>
+    
+
     <h1 style="text-align:center"> TO DO LIST</h1>
     
-    <div id="input">
-    <form>
-        <input type="text">
-        </form>
-        </div>
-        
-        <div id="listitems">
-        <ul id="myUL">
-            <li> klhdugo </li>
+            <input type="text" id="input">
+
+       <input type="submit" value="ADD" class="addBtn" onclick="addItem()"/>
+       
+
+
+            <ul id="myList" class="default" onclick="changeClass()">
             </ul>
-            </div>
-    
+            
+       <input type="button" onclick="resetList()" value="RESET LIST" class="resetBtn"/>
+
+
         
 <script>
-var listitems = document.getElementById("listitems");
+function addItem() {
+    var item = document.getElementById('input').value;
+    var text = document.createTextNode(item);
+    var newItem = document.createElement("li");
+    newItem.appendChild(text);
+    document.getElementById('myList').appendChild(newItem);
+}
+</script>
 
-listitems.addEventListener("click", function(){
-  listitems.className="strike";  
+<script>
 
+var myList = document.getElementById("myList");
 
+function changeClass() {
+var className = myList.getAttribute("class");
+ if (myList.className === "default") {   
+  myList.className = "strike";
+} else if (myList.className === "strike"){
+    myList.className = "black";
+}
+else{
+    myList.className = "default";
+}
+}
 
 </script>
 
+<script>
+
+function resetList(){
+    document.getElementById("myList").innerHTML = "";
+    document.getElementById("input").reset();
+}
+
+</script>
+
+<script>
+if   myList.className="strike";{
+    myList.addEventListener("click", function(){
+    
+  myList.className="";
+}
+</script>
 </body>
 </html>
